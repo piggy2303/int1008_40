@@ -126,6 +126,8 @@ int main()
 // true false => false
 // false false => false
 
+// a => road_1 => road_2  => b
+
 // OR ||
 // true true => true
 // true false => true
