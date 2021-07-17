@@ -13,8 +13,14 @@ int main()
     // // bool a = 0;
 
     // // cout << a << endl;
+    // bool a = ;
 
-    // if (0)
+    // cout << a << endl;
+    // int a;
+
+    // cin >> a;
+
+    // if (a > 0)
     // {
     //     cout << "o ben trong if" << endl;
     // }
@@ -36,14 +42,20 @@ int main()
     // if (age >= 0 && age < 18)
     // {
     //     cout << "khong duoc" << endl;
-    // }
+    // // }
+    // int age = 12;
 
     // if (age >= 18 && age < 100)
     // {
     //     cout << "ok" << endl;
     // }
 
-    // int a = 3;
+    // else
+    // {
+    //     cout << "khong duoc" << endl;
+    // }
+
+    // int a = 4;
 
     // if (a % 3 == 0)
     // {
@@ -51,11 +63,7 @@ int main()
     // }
     // else if (a % 3 == 1)
     // {
-    //     cout << "chia 3 du 1" << endl;
-    // }
-    // else if (a % 3 == 1)
-    // {
-    //     cout << "chia 3 du 1" << endl;
+    //     cout << "chia 3 du 1 thu nhat " << endl;
     // }
     // else
     // {
@@ -75,9 +83,26 @@ int main()
     //     cout << "2" << endl;
     //     break;
     // default:
-    //     cout << "cac thu con lai" << endl;
+    //     cout << "tat ca nhung thu con lai" << endl;
+    //     break;
     // }
 
+    // int thu;
+    // cin >> thu;
+
+    // switch (thu)
+    // {
+    // case 2:                           // if (a == 2) {}
+    //     cout << "thu 2" << endl;
+    //     break;
+    // case 3:                             // if (a == 3) {}
+    //     cout << "thu 3" << endl;
+    //     break;
+    // default:                              // else{}
+    //     cout << "cac thu con lai" << endl;
+    //     break;
+    // }
+    // 1 2 3 4 5 6 7 8 9
     // int thu;
     // cin >> thu;
     // switch (thu)
@@ -118,7 +143,23 @@ int main()
 
     // char a;
     // cin >> a;
+    // cout << a << endl;
+
     // int bang_ma = (int)a;
+
+    // if (bang_ma >= 97 && bang_ma <= 122)
+    // {
+    //     bang_ma = bang_ma - 32;
+    // }
+    // cout << bang_ma << endl;
+
+    // char a_moi = (char)bang_ma;
+    // cout << a_moi << endl;
+
+    // int b = 40;
+    // cout << b << endl;
+    // char b_m = (char)b;
+    // cout << b_m << endl;
 
     // cout << a << endl;
     // cout << bang_ma << endl;
@@ -164,32 +205,32 @@ int main()
     // }
     // cout << str << endl;
 
-    // int ngay, thang;
-    // cin >> ngay >> thang;
+    int ngay, thang;
+    cin >> ngay >> thang;
 
-    // switch (thang)
-    // {
-    // case 1:
-    //     if (ngay <= 19)
-    //     {
-    //         cout << "maket" << endl;
-    //     }
-    //     else
-    //     {
-    //         cout << "baobinh" << endl;
-    //     }
-    //     break;
-    // case 2:
-    //     if (ngay <= 18)
-    //     {
-    //         cout << "baobinh" << endl;
-    //     }
-    //     else
-    //     {
-    //         cout << "songngu" << endl;
-    //     }
-    //     break;
-    // }
+    switch (thang)
+    {
+    case 1:
+        if (ngay <= 19)
+        {
+            cout << "maket" << endl;
+        }
+        else
+        {
+            cout << "baobinh" << endl;
+        }
+        break;
+    case 2:
+        if (ngay <= 18)
+        {
+            cout << "baobinh" << endl;
+        }
+        else
+        {
+            cout << "songngu" << endl;
+        }
+        break;
+    }
 
     // int a = 100;
     // int sqrt_a = sqrt(a);
@@ -268,21 +309,26 @@ int main()
 
     // cout << a << endl;
 
-    int a;
-    char b;
-    cin >> b;
+    // int a;
+    // char b;
+    // cin >> b;
 
-    cout << b << endl;
+    // cout << b << endl;
 
-    int bang_ma_cua_b = (int)b;
+    // int bang_ma_cua_b = (int)b;
 
-    cout << bang_ma_cua_b << endl;
+    // cout << bang_ma_cua_b << endl;
 
-    return 0;
+    // return 0;
 }
 
 // if
 // ...
+// else if
+// else if
+// else if
+// else if
+// else if
 // else if
 // ...
 // else
