@@ -8,8 +8,12 @@ int main()
 
     // while (true)
     // {
-    //     cout << "dem_so nho hon 5: " << dem_so << endl;
     //     dem_so++;
+    //     if (dem_so < 3)
+    //     {
+    //         continue;
+    //     }
+    //     cout << "dem_so nho hon 5: " << dem_so << endl;
     //     if (dem_so > 5)
     //     {
     //         break;
@@ -24,22 +28,23 @@ int main()
     //     dem_so++;
     // } while (dem_so < 5);
 
-    // for(    khoi tao     ;   dieu kien     ;   cap nhat     ){
+    // for (khoi tao; dieu kien; cap nhat)
+    // {
+    // }
 
+    // for (int i = 0; i < 5; i++)
+    // {
+    //     cout << "a" << endl;
     // }
 
     // int tong = 0;
+    // int n = 10;
 
-    // for (int i = 0; i <= 10; i++)
+    // for (int i = 0; i <= n; i++)
     // {
-    //     if (i > 5)
-    //     {
-    //         continue;
-    //     }
-    //     cout << i << endl;
     //     tong += i;
+    //     cout << i << " " << tong << endl;
     // }
-
     // cout << tong << endl;
 
     // int n = 3;
@@ -61,14 +66,15 @@ int main()
     // ***
     // * *
     // ***
+
     // int n = 3;
     // for (int i = 0; i <= n; i++)
     // {
     //     for (int j = 0; j <= n; j++)
     //     {
-    //         if ((j == 0 || j == n) || (i == 0 || i == n))
+    //         if (j == 0 || j == n || i == 0 || i == n)
     //         {
-    //             cout << "*";
+    //             cout << "x";
     //         }
     //         else
     //         {
@@ -131,7 +137,7 @@ int main()
             cout << "*";
         }
 
-        for (int k = 1; k <= (2 * (i) + 1); k++)
+        for (int k = 0; k < (2 * (i) + 1); k++)
         {
             cout << "0";
         }

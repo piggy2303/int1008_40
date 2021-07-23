@@ -3,19 +3,21 @@ using namespace std;
 
 int tong_2_so(int x, int y)
 {
-    int aa = 4;
-    return x + y;
+    float aa = 3.2;
+    cout << "trong ham " << aa << endl;
+
+    return aa;
 }
 
-void in_ra_chan_le(int a)
+void so_chan_le(int x)
 {
-    if (a % 2 == 0)
+    if (x % 2 == 0)
     {
-        cout << "so_chan" << endl;
+        cout << "so chan" << endl;
     }
     else
     {
-        cout << "so_le" << endl;
+        cout << "so le" << endl;
     }
 }
 
@@ -23,11 +25,7 @@ int main()
 {
     int a = 1, b = 2;
 
-    cout << tong_2_so(a, b) << endl;
-    in_ra_chan_le(a);
-    in_ra_chan_le(b);
-
-    cout << aa << endl;
+    tong_2_so(a, b);
 
     return 0;
 }

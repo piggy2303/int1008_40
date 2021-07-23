@@ -14,7 +14,7 @@ int UCLN(int a, int b)
             return UCLN(b % a, a);
         }
     }
-    else
+    else // b <a
     {
         if (b == 0)
         {
@@ -22,7 +22,7 @@ int UCLN(int a, int b)
         }
         else
         {
-            return UCLN(a % b, b);
+            return UCLN(b, a % b);
         }
     }
 }
@@ -32,6 +32,30 @@ int main()
     // cout << UCLN(9, 12) << endl;
     // cout << UCLN(12, 9) << endl;
     // cout << UCLN(12, 12) << endl;
+    // int a = 12, b = 12;
+
+    // while (true)
+    // {
+    //     if (a == 0)
+    //     {
+    //         cout << b << endl;
+    //         break;
+    //     }
+    //     if (b == 0)
+    //     {
+    //         cout << a << endl;
+    //         break;
+    //     }
+
+    //     if (a < b)
+    //     {
+    //         b = b % a;
+    //     }
+    //     else
+    //     {
+    //         a = a % b;
+    //     }
+    // }
 
     // int socon, sochan, ga, cho;
     // cin >> socon >> sochan;
@@ -57,30 +81,30 @@ int main()
     //     cout << "invalid" << endl;
     // }
 
-    int a = 12, b = 12;
+    // int a = 12, b = 12;
 
-    while (true)
-    {
-        if (a == 0)
-        {
-            cout << b << endl;
-            break;
-        }
-        if (b == 0)
-        {
-            cout << a << endl;
-            break;
-        }
+    // while (true)
+    // {
+    //     if (a == 0)
+    //     {
+    //         cout << b << endl;
+    //         break;
+    //     }
+    //     if (b == 0)
+    //     {
+    //         cout << a << endl;
+    //         break;
+    //     }
 
-        if (a > b)
-        {
-            a = a % b;
-        }
-        else
-        {
-            b = b % a;
-        }
-    }
+    //     if (a > b)
+    //     {
+    //         a = a % b;
+    //     }
+    //     else
+    //     {
+    //         b = b % a;
+    //     }
+    // }
 
     return 0;
 }
