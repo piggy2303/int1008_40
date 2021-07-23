@@ -1,2 +1,2 @@
-g++ buoi_2.cpp -o output.out
+g++ fibo.cpp -o output.out
 ./output.out
