@@ -1,2 +1,2 @@
-g++ fibo.cpp -o output.out
+g++ bai_tap_ham.cpp -o output.out
 ./output.out
