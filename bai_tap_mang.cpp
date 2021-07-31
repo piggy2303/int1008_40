@@ -41,7 +41,7 @@ int couting_key_in_array(int a[], int search_key, int n)
     return count;
 }
 
-int main()
+int main_1()
 {
     int n;
     cin >> n;
@@ -113,6 +113,115 @@ int main()
              << endl;
     }
     cout << endl;
+
+    // 3 2 3 1 2
+    // 3 2 1
+
+    // 3 2
+    // 2 2
+    // 1 1
+
+    return 0;
+}
+
+int main_2()
+{
+    int n;
+    cin >> n;
+    int a[n];
+    float tong = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+        tong += a[i];
+    }
+
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cout << a[i] << " ";
+    // }
+    // cout << endl;
+
+    float tb = tong / n;
+    // cout << tb << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] >= tb)
+        {
+            cout << a[i] << " ";
+        }
+    }
+
+    return 0;
+}
+
+void normalize(double *out, int *in, int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        out[i] = (double)in[i] / 255;
+        // cout << in[i] << endl;
+    }
+}
+
+void normalize_arr(double out[], int in[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        out[i] = (double)in[i] / 255;
+    }
+}
+
+void reverse(char *s)
+{
+
+    // buoc 1 : dem co bao nhieu ky tu
+    int count = 0;
+    while ((int)s[count] != 0)
+    {
+        count++;
+    }
+    // cout << i << endl;
+
+    char *a = new char[count + 1];
+    for (int i = 0; i < count; i++)
+    {
+        a[i] = s[count - i - 1];
+        // cout << a[i] << endl;
+    }
+
+    for (int i = 0; i < count; i++)
+    {
+        s[i] = a[i];
+        // cout << s[i] << endl;
+    }
+}
+
+int main()
+{
+    char a[] = "abc";
+    char *iPtr = a;
+    reverse(iPtr);
+
+    return 0;
+}
+
+int main_3()
+{
+    int n = 3;
+    int numbers[] = {11, 22, 33};
+    int *iPtr = numbers;
+    double numbers_norm[n];
+    double *iPtr_norm = numbers_norm;
+
+    normalize(iPtr_norm, iPtr, n);
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << numbers[i] << " " << numbers_norm[i] << endl;
+    }
 
     return 0;
 }

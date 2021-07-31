@@ -7,8 +7,24 @@ void thay_doi_so(int &x)
     x = 10;
 }
 
+void thay_doi_so_2(int *x)
+{
+    cout << "thay_doi_so_2 "
+         << *x << " "
+         << x << endl;
+    int b = 10;
+    x = &b;
+}
+
 int main()
 {
+    int a = 1;
+    int *p = &a;
+
+    cout << &a << endl;
+
+    thay_doi_so_2(p);
+    cout << a << endl;
     // * dua ra gia tri
     // & dua ra dia chi
     // int x = 1;
@@ -19,32 +35,32 @@ int main()
     // thay_doi_so(*p);
     // cout << x << endl;
 
-    int a = 1, b = 2;
-    cout << a << " " << b << endl;
-    a = b;
-    cout << a << " " << b << endl;
-    a++;
-    cout << a << " " << b << endl;
+    // int a = 1, b = 2;
+    // cout << a << " " << b << endl;
+    // a = b;
+    // cout << a << " " << b << endl;
+    // a++;
+    // cout << a << " " << b << endl;
 
-    int *pa, *pb;
-    pa = &a;
-    pb = &b;
-    cout << pa << " " << *pa << " " << a << endl;
-    cout << pb << " " << *pb << " " << b << endl;
+    // int *pa, *pb;
+    // pa = &a;
+    // pb = &b;
+    // cout << pa << " " << *pa << " " << a << endl;
+    // cout << pb << " " << *pb << " " << b << endl;
 
-    cout << "magic" << endl;
+    // cout << "magic" << endl;
 
-    pa = pb;
+    // pa = pb;
 
-    cout << pa << " " << *pa << " " << a << endl;
-    cout << pb << " " << *pb << " " << b << endl;
+    // cout << pa << " " << *pa << " " << a << endl;
+    // cout << pb << " " << *pb << " " << b << endl;
 
-    cout << "magic2" << endl;
+    // cout << "magic2" << endl;
 
-    *pa = 4;
+    // *pa = 4;
 
-    cout << pa << " " << *pa << " " << a << endl;
-    cout << pb << " " << *pb << " " << b << endl;
+    // cout << pa << " " << *pa << " " << a << endl;
+    // cout << pb << " " << *pb << " " << b << endl;
 
     // p = &x;
     // *p = *p + 1;
