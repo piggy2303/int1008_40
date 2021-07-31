@@ -1,75 +1,46 @@
+#include <cmath>
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    // int max = 0;
-    // string n;
-    // cin >> n;
-
-    // for (int i = 0; i < n.length(); i++)
-    // {
-    //     int nn = (int)(n[i]) - 48;
-    //     if (nn > max)
-    //     {
-    //         max = nn;
-    //     }
-    // }
-    // cout << max << endl;
-    // char a;
-    // cin >> a;
-    // cout << (int)a;
-
-    // int n;
-    // cin >> n;
-    // bool chinh_phuong = false;
-
-    // for (int i = 1; i <= n; i++)
-    // {
-    //     if (i * i == n)
-    //     {
-    //         cout << "chinh_phuong" << endl;
-    //         chinh_phuong = true;
-    //         break;
-    //     }
-    // }
-    // if (chinh_phuong == false)
-    // {
-    //     cout << "khong_phai" << endl;
-    // }
-
     // int n, count_uoc = 0;
     // cin >> n;
 
-    // for (int i = 2; i <= n; i = i + 2)
+    // for (int i = 1; i <= n/2; i++)
     // {
     //     if (n % i == 0)
     //     {
     //         count_uoc++;
     //     }
     // }
-    // cout << count_uoc << endl;
 
-    while (true)
+    // if (count_uoc == 2)
+    // {
+    //     cout << "yes" << endl;
+    // }
+    // else
+    // {
+    //     cout << "no" << endl;
+    // }
+
+    int n;
+    cin >> n;
+
+    // cach 1
+    int k = sqrt(n);
+    if (k * k == n)
     {
-        int n;
-        cin >> n;
+        cout << "yes" << endl;
+    }
 
-        if (n == -1)
+    // cach2
+    for (int i = 1; i < (n / 2); i++)
+    {
+        if (i * i == n)
         {
-            cout << "bye" << endl;
+            cout << "yes" << endl;
             break;
-        }
-        else
-        {
-            if (n < 0 || n % 5 != 0)
-            {
-                cout << "-1" << endl;
-            }
-            else
-            {
-                cout << (n / 5) << endl;
-            }
         }
     }
 

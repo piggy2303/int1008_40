@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -128,22 +129,27 @@ int main()
     //   *****
     //  *******
 
-    int n = 4;
+    // int n = 4;
 
-    for (int i = 0; i <= n; i++)
-    {
-        for (int j = n; j >= i; j--)
-        {
-            cout << "*";
-        }
+    // for (int i = 0; i <= n; i++)
+    // {
+    //     for (int j = n; j >= i; j--)
+    //     {
+    //         cout << "*";
+    //     }
 
-        for (int k = 0; k < (2 * (i) + 1); k++)
-        {
-            cout << "0";
-        }
+    //     for (int k = 0; k < (2 * (i) + 1); k++)
+    //     {
+    //         cout << "0";
+    //     }
 
-        cout << endl;
-    }
+    //     cout << endl;
+    // }
+
+    int a = 3, b = 2;
+    float aa = a;
+
+    cout << fixed << setprecision(2) << (aa / b) << endl;
 
     return 0;
 }

@@ -3,62 +3,66 @@
 
 using namespace std;
 
-void dem_so_chan_le(string a)
+bool is_prime(int a)
 {
-
-    bool doi_xung = true;
-
-    for (int i = 0; i < (a.length() / 2); i++)
+    for (int i = 2; i < (a - 1); i++)
     {
-        // cout << a[i] << " " << a[a.length() - i - 1] << endl;
-
-        if (a[i] != a[a.length() - i - 1])
+        if (a % i == 0)
         {
-            doi_xung = false;
+            return false;
         }
     }
+    return true;
+}
 
-    if (doi_xung)
+bool check_nguyen_am(char a)
+{
+    // ueoai
+    if (a == 'u')
     {
-        cout << "yes" << endl;
+        return true;
+    }
+    else if (a == 'e')
+    {
+        return true;
+    }
+    else if (a == 'o')
+    {
+        return true;
+    }
+    else if (a == 'a')
+    {
+        return true;
+    }
+    else if (a == 'i')
+    {
+        return true;
     }
     else
     {
-        cout << "no" << endl;
+        return false;
     }
 }
 
-void tim_kiem(string a, string b)
+string pigLatin(string word)
 {
-    bool is_found = false;
-    for (int i = 0; i < a.length(); i++)
+    if (check_nguyen_am(word[0]))
     {
-        if (a[i] == b[0])
-        {
-            cout << i + 1 << endl;
-            is_found = true;
-            break;
-        }
+        return word + "way";
     }
-    if (is_found == false)
+    else
     {
-        cout << "-1" << endl;
+        word = word + word[0]
     }
+    return word;
 }
 
 int main()
 {
-    int n;
+    string n;
     cin >> n;
 
-    for (int i = 0; i < n; i++)
-    {
-        string a, b;
-        cin >> a >> b;
-        // cout << a << " " << b << endl;
-
-        tim_kiem(a, b);
-    }
+    cout << pigLatin(n) << endl;
 
     return 0;
 }
