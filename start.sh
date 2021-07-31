@@ -1,2 +1,2 @@
-g++ bai_tap_mang.cpp -o output.out
+g++ bai_tap_mang_2.cpp -o output.out
 ./output.out

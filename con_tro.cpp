@@ -7,24 +7,57 @@ void thay_doi_so(int &x)
     x = 10;
 }
 
-void thay_doi_so_2(int *x)
+void swap_2_number(int &a, int &b)
 {
-    cout << "thay_doi_so_2 "
-         << *x << " "
-         << x << endl;
-    int b = 10;
-    x = &b;
+    int c = b;
+    b = a;
+    a = c;
 }
 
 int main()
 {
-    int a = 1;
-    int *p = &a;
+    int a = 10;
 
-    cout << &a << endl;
+    int b = a;
 
-    thay_doi_so_2(p);
+    b++;
+    cout << a << " " << b << endl;
+
+    int *p1 = &a;
+    int *p2 = p1;
+    *p2 = 100;
     cout << a << endl;
+
+    // int a = 1, b = 2;
+    // swap_2_number(a, b);
+    // cout << a << " " << b << endl;
+
+    // int c = 1;
+    // thay_doi_so(c);
+
+    // cout << c << endl;
+
+    // int a = 1;
+
+    // cout << a << endl;
+    // cout << &a << endl;
+
+    // int *p1;
+    // p1 = &a;
+
+    // cout << p1 << endl;
+    // cout << *p1 << endl;
+
+    // thay_doi_so(*p1);
+    // cout << a << endl;
+
+    // int a = 1;
+    // int *p = &a;
+
+    // cout << &a << endl;
+
+    // thay_doi_so_2(p);
+    // cout << a << endl;
     // * dua ra gia tri
     // & dua ra dia chi
     // int x = 1;

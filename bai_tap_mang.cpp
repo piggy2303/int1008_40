@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <iomanip>
+
 using namespace std;
 
 bool search_array(vector<int> a, int search_key)
@@ -41,7 +43,7 @@ int couting_key_in_array(int a[], int search_key, int n)
     return count;
 }
 
-int main_1()
+int main_5()
 {
     int n;
     cin >> n;
@@ -76,6 +78,13 @@ int main_1()
         }
     }
 
+    cout << "a_unique = " << endl;
+    for (int i = 0; i < a_unique.size(); i++)
+    {
+        cout << a_unique[i] << " ";
+    }
+    cout << endl;
+
     for (int i = 0; i < a_unique.size(); i++)
     {
         cout << "phan tu " << a_unique[i]
@@ -88,6 +97,7 @@ int main_1()
     cout << endl
          << endl
          << "option 2: using normal array" << endl;
+
     int b_unique[n];
     b_unique[0] = a[0];
     int b_unique_size = 1;
@@ -121,6 +131,56 @@ int main_1()
     // 2 2
     // 1 1
 
+    return 0;
+}
+
+int main_6()
+{
+    int n;
+    cin >> n;
+    float a[n];
+    float tong = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+        tong += a[i];
+    }
+
+    float tb = tong / n;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] > tb)
+        {
+            cout << fixed << setprecision(2) << a[i] << " ";
+        }
+    }
+
+    return 0;
+}
+
+int main_7()
+{
+    int m, n, k;
+    cin >> m >> n >> k;
+    int arr[m][n];
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cin >> arr[i][j];
+        }
+    }
+
+    for (int i = 0; i < k; i++)
+    {
+        int a, b;
+        cin >> a >> b;
+        a--;
+        b--;
+        cout << arr[a][b] << endl;
+    }
     return 0;
 }
 
@@ -174,6 +234,25 @@ void normalize_arr(double out[], int in[], int n)
     }
 }
 
+int main_8()
+{
+    int n = 4;
+    int a[] = {0, 1, 2, 3};
+    double b[4];
+
+    int *pa = a;
+    double *pb = b;
+
+    // normalize_arr(b, a, n);
+    normalize(pb, pa, n);
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << b[i] << " ";
+    }
+    return 0;
+}
+
 void reverse(char *s)
 {
 
@@ -199,11 +278,61 @@ void reverse(char *s)
     }
 }
 
-int main()
+void delete_char(char *s, char c)
 {
-    char a[] = "abc";
+    int count = 0;
+    int count_khac_c = 0;
+    while (true)
+    {
+        if ((int)s[count] == 0)
+        {
+            break;
+        }
+
+        if (s[count] != c)
+        {
+            count_khac_c++;
+        }
+        count++;
+    }
+    // cout << count << " " << count_khac_c << endl;
+
+    char *temp = new char[count_khac_c + 1];
+    int j = 0;
+    for (int i = 0; i < count; i++)
+    {
+        if (s[i] != c)
+        {
+            temp[j] = s[i];
+            j++;
+        }
+    }
+
+    for (int i = 0; i < count; i++)
+    {
+        if (i < j)
+        {
+            s[i] = temp[i];
+        }
+        else
+        {
+            s[i] = (char)0;
+        }
+
+        // cout << s[i] << " ";
+    }
+}
+
+int main_4()
+{
+    char a[] = "bbcaaa";
+    char c = 'a';
+
+    // cout << (a[0] == c) << endl;
+
     char *iPtr = a;
-    reverse(iPtr);
+    // reverse(iPtr);
+    delete_char(iPtr, c);
 
     return 0;
 }
