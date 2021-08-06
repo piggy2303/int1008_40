@@ -130,27 +130,6 @@ int main_5()
 
 int main_6()
 {
-    int n = 5;
-    // cin >> n;
-    for (int j = 0; j < n; j++)
-    {
-        for (int i = (n - 1 - j); i > 0; i--)
-        {
-            cout << " ";
-        }
-
-        for (int i = 0; i < (2 * j + 1); i++)
-        {
-            cout << "*";
-        }
-
-        cout << endl;
-    }
-    return 0;
-}
-
-int main_7()
-{
     // N 10  E 5  => N5E10 => ucln(5,10)=> 5 => chia 5,10 cho ucln => NE2
     int a, b;
     char a1, b1;
@@ -160,6 +139,7 @@ int main_7()
     a = a / ucln_a_b;
     b = b / ucln_a_b;
 
+    // p 5 o 2 => po
     cout << a1;
     if (b > 1)
     {
@@ -198,8 +178,8 @@ int main_8()
 
 int main_9()
 {
-    // 6 12 30 45;
-    // 6 30 45
+    // 6 12 30 45
+    // 6 30
     // 6 45
     // 3
     int n = 4;
@@ -218,11 +198,10 @@ int main_9()
 
 // 10,00 => 10
 // 10,33333 => 10,33
-// 10,30 =>
+// 10,30 => 10,30
 
-// a * 100 => a%10 => so cuoi=> if so_cuoi == 0 => int
 
-int main()
+int main_10()
 {
     float a = 10.333333;
     int new_a = (int)a;
