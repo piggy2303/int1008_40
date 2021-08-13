@@ -1,2 +1,2 @@
-g++ chua_bai_ontap.cpp -o output.out
+g++ struct_bai_tap.cpp -o output.out
 ./output.out
