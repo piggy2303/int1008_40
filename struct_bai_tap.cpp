@@ -108,31 +108,6 @@ struct tam_giac
     }
 };
 
-struct cylinder
-{
-    double radius, high;
-
-    cylinder(double _radius, double _high)
-    {
-        radius = _radius;
-        high = _high;
-        // them code cua ban o day
-    }
-
-    double getSurfaceArea()
-    {
-        double S = 2 * 3.14 * radius * radius + 2 * 3.14 * radius * high;
-        return S;
-        // them code cua ban o day
-    }
-    double getVolume()
-    {
-        double V = 3.14 * radius * radius * high;
-        return V;
-        // them code cua ban o day
-    }
-};
-
 int ucln(int a, int b)
 {
     if (a == 0)

@@ -70,9 +70,10 @@ bool check_nam_nhuan(int y)
 int main_2()
 {
 
-    // het nam => 1 1 nam
-    // het thang => 1 thang moi nam
+    // het nam => 1 1 nam++
+    // het thang => 1 thang++ nam
     // =>tang ngay
+
     int d, m, y;
     cin >> d >> m >> y;
 
@@ -164,29 +165,164 @@ int main_3()
     return 0;
 }
 
-#include <iostream>
-#include <algorithm>
-#include <functional>
-using namespace std;
+int main_4()
+{
+
+    int n = 7;
+
+    if (n % 2 == 0)
+    {
+        cout << "no" << endl;
+    }
+    else
+    {
+        // m bang 1 nua n
+        int m = n / 2 + 1;
+
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                cout << " ";
+            }
+
+            for (int j = 0; j < (m - i) * 2 - 1; j++)
+            {
+                cout << "=";
+            }
+
+            cout << endl;
+        }
+
+        int k = n - m;
+        int g = 3;
+
+        for (int i = 0; i < k; i++)
+        {
+            for (int j = (k - i - 1); j > 0; j--)
+            {
+                cout << " ";
+            }
+
+            for (int j = 0; j < g; j++)
+            {
+                cout << "=";
+            }
+            g += 2;
+
+            cout << endl;
+        }
+    }
+    return 0;
+}
+
+int main_5()
+{
+    int d, m, y;
+    cin >> d >> m >> y;
+
+    // ngay dau cua nam => 31 12 nam--
+    // ngay dau tien cua thang => thang-- check xem cai thang-- no co bao nhieu ngay
+    // ngay binh thuong ngay--
+
+    if (d == 1 && m == 1)
+    {
+        d = 31;
+        m = 12;
+        y--;
+    }
+    else
+    {
+
+        if (d == 1)
+        {
+            m--;
+
+            if (m == 2 && check_nam_nhuan(y))
+            {
+                d = 29;
+            }
+            else if (m == 2 && !check_nam_nhuan(y))
+            {
+                d = 28;
+            }
+        }
+
+        else
+        {
+            d--;
+        }
+    }
+
+    cout << d << " " << m << " " << y << endl;
+    return 0;
+}
+
+bool check_nto(int n)
+{
+    for (int i = 2; i < n / 2; i++)
+    {
+        if (n % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+int max_nto(int n)
+{
+    int max_nto = 2;
+
+    for (int i = n - 1; i >= 2; i--)
+    {
+        // if ( check_nto(i) && i > max_nto  ){
+        //     max_nto = i;
+        // }
+        if (check_nto(i))
+        {
+            max_nto = i;
+            break;
+        }
+    }
+
+    return max_nto;
+}
+
+void bubble_sort_giam_dan(int a[], int n)
+{
+    for (int j = 1; j < n; j++)
+    {
+        for (int i = 0; i < n - j; i++)
+        {
+            if (a[i + 1] > a[i])
+            {
+                int c = a[i + 1];
+                a[i + 1] = a[i];
+                a[i] = c;
+            }
+        }
+    }
+}
+
 int main()
 {
     int n;
     cin >> n;
-    int a[n], t[n];
-    for (int i = 1; i <= n; ++i)
+    int arr[n];
+    int b_arr[n];
+    for (int i = 0; i < n; i++)
     {
-        cin >> a[i];
-        t[i] = 0;
-        for (int j = 1; j <= a[i]; ++j)
-        {
-            if (a[i] % j == 0)
-            {
-                t[i] = t[i] + j;
-            }
-        }
+        cin >> arr[i];
+
+        b_arr[i] = max_nto(arr[i]);
     }
-    for (int i = 1; i <= n; ++i)
+    bubble_sort_giam_dan(b_arr, n);
+
+    for (int i = 0; i < n; i++)
     {
-        cout << t[i] << " ";
+        cout << b_arr[i] << " ";
     }
+    cout << endl;
+    return 0;
 }
