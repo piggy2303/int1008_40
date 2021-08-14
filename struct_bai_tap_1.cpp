@@ -199,19 +199,22 @@
 using namespace std;
 int main()
 {
-    int a, b;
-    cin >> a;
-    b = 2 * a - 1;
+    // int a, b;
+    // cin >> a;
+    // b = 2 * a - 1;
 
-    while (a > 0)
-    {
-        for (int i = 1; i <= b; i++)
-        {
-            cout << "=";
-        }
-        a--;
-        b -= 2;
-        cout << endl;
-    }
+    // while (a > 0)
+    // {
+    //     for (int i = 1; i <= b; i++)
+    //     {
+    //         cout << "=";
+    //     }
+    //     a--;
+    //     b -= 2;
+    //     cout << endl;
+    // }
+    float a = 1.21;
+    cout << a << endl;
+
     return 0;
 }
