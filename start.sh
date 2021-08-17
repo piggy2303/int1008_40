@@ -1,2 +1,2 @@
-g++ minitest_3_nhom1.cpp -o output.out
+g++ baitap.cpp -o output.out
 ./output.out
